@@ -149,19 +149,26 @@ footer {
   margin-top: 12px;
 }
 
+
 .participants-list {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style: none; /* hide default bullets */
+  padding-left: 0;
   margin-top: 6px;
-  max-height: 120px;
+  max-height: 140px;
   overflow-y: auto;
 }
 
 .participants-list li {
-  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 8px;
   font-size: 14px;
   color: #333;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.04);
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(0,0,0,0.01));
+  border-radius: 4px;
 }
 
 .participants-list li:last-child {
@@ -173,6 +180,31 @@ footer {
   color: #666;
   list-style-type: none;
   padding-left: 0;
+}
+
+/* Participant item specifics */
+.participant-email {
+  color: #333;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.12s, color 0.12s;
+}
+
+.remove-btn:hover {
+  background-color: rgba(198, 40, 40, 0.06);
+  color: #b71c1c;
 }
 
 /* Make participant list look subtle on small screens */
